@@ -31,11 +31,11 @@ document.querySelectorAll(".fade-in").forEach((el) => {
 });
 
 // Form submission - Lógica de envio do formulário de contacto
-document.querySelector(".contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Mensagem enviada! Entraremos em contacto em breve.");
-  e.target.reset();
-});
+// document.querySelector(".contact-form").addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   alert("Mensagem enviada! Entraremos em contacto em breve.");
+//   e.target.reset();
+// });
 const canvas = document.getElementById("hero-canvas");
 const ctx = canvas.getContext("2d");
 
