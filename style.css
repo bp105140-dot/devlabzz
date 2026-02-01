@@ -347,7 +347,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  opacity: 0.2;
+  opacity: 0.5;
   transition: opacity 0.3s;
 }
 
@@ -588,3 +588,4 @@ footer p {
 .whatsapp-float {
   animation: pulse-green 2s infinite;
 }
+
