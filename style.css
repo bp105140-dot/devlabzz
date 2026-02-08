@@ -348,7 +348,7 @@ section {
   align-items: center;
   padding: 2rem;
   /* opacity: 0.1; */
-  transition: opacity 0.3s;
+  /* transition: opacity 0.3s; */
 }
 
 .portfolio-item:hover .portfolio-overlay {
@@ -815,6 +815,7 @@ footer p {
   z-index: 10;
 }
 .close-btn:hover { color: #fff; }
+
 
 
 
