@@ -673,4 +673,146 @@ footer p {
   transform: translateY(-3px);
   box-shadow: 0 0 25px rgba(255, 0, 110, 0.6);
 }
+/* --- Estilos do Pop-up (Modal - Versão Atualizada) --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 14, 39, 0.95); /* Mais escuro para foco total */
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #0a0e27, #1a1f40);
+  border: 1px solid rgba(0, 240, 255, 0.3); /* Borda Ciano sutil */
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 480px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.15);
+  animation: fadeInUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efeito elástico */
+}
+
+/* Tag de destaque no topo */
+.tag-destaque {
+  display: inline-block;
+  background: rgba(255, 0, 110, 0.2);
+  color: var(--accent);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accent);
+}
+
+.modal-content h2 {
+  font-family: "Orbitron", monospace;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: rgba(245, 245, 247, 0.7);
+  line-height: 1.6;
+}
+
+/* Lista de Benefícios */
+.modal-benefits {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.benefit-item:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.check {
+  font-size: 1.2rem;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  color: var(--neutral);
+  margin: 0;
+}
+
+.benefit-item strong {
+  color: var(--secondary); /* Destaque em Ciano */
+}
+
+/* Botão Pulsante */
+.btn-destaque {
+  background: var(--gradient); /* Usa o gradiente do seu tema */
+  color: #0a0e27;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 1.2rem;
+  width: 100%;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  display: block;
+}
+
+.btn-destaque:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* Animação de chamar atenção */
+.pulse-animation {
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(0, 240, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+}
+
+.modal-footer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  z-index: 10;
+}
+.close-btn:hover { color: #fff; }
 
