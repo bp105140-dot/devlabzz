@@ -588,4 +588,89 @@ footer p {
 .whatsapp-float {
   animation: pulse-green 2s infinite;
 }
+/* --- Estilos do Pop-up (Modal) --- */
+.modal {
+  display: none; /* Começa escondido */
+  position: fixed;
+  z-index: 2000; /* Fica acima de tudo, inclusive do menu */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 14, 39, 0.9); /* Fundo escuro transparente */
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px); /* Desfoque no fundo */
+}
+
+.modal-content {
+  background: var(--primary);
+  border: 2px solid var(--accent); /* Borda Rosa Neon para destaque */
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.4); /* Brilho rosa */
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Botão de Fechar (X) */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: var(--neutral);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: var(--accent);
+}
+
+/* Títulos e Textos do Modal */
+.modal-content h2 {
+  font-family: "Orbitron", monospace;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--neutral);
+}
+
+.modal-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(245, 245, 247, 0.8);
+}
+
+.modal-benefits {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.modal-benefits p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--secondary); /* Texto Ciano */
+}
+
+/* Botão de Destaque Específico do Modal */
+.btn-destaque {
+  background: var(--accent); /* Fundo Rosa */
+  color: #fff;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.4);
+}
+
+.btn-destaque:hover {
+  background: #ff3385;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.6);
+}
 
