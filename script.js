@@ -122,3 +122,31 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 init();
 animate();
+// --- Lógica do Pop-up do eBook ---
+
+const modal = document.getElementById("ebook-modal");
+const closeBtn = document.querySelector(".close-btn");
+
+// Função para abrir o modal
+function openModal() {
+  modal.style.display = "flex";
+}
+
+// Função para fechar o modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Mostra o pop-up automaticamente após 4 segundos (4000ms)
+// Você pode alterar o 4000 para o tempo que preferir
+setTimeout(openModal, 4000);
+
+// Fecha ao clicar no X
+closeBtn.addEventListener("click", closeModal);
+
+// Fecha ao clicar fora da caixa do modal (no fundo escuro)
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
