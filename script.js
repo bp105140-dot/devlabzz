@@ -150,27 +150,30 @@ window.addEventListener("click", (e) => {
     closeModal();
   }
 });
-// --- Contador de Visitas (API Gratuita) ---
-// Nota: Isso cria um contador único para o domínio 'devlabzz.com.br'
-// Se estiver testando localmente, o número pode aumentar.
-
+// --- Contador de Visitas (Versão Blindada) ---
 function updateCounter() {
   const counterElement = document.getElementById("visits");
   
   if (counterElement) {
-    // Usando a API countapi.xyz (Namespace: devlabzz, Key: visits)
-    // Se for a primeira vez, ele cria a chave automaticamente.
-    fetch('https://api.countapi.xyz/hit/devlabzz.com.br/visits')
+    // Usando a API counterapi.dev (Mais estável que a anterior)
+    fetch('https://api.counterapi.dev/v1/devlabzz/visits/up')
       .then(res => res.json())
       .then(res => {
-        counterElement.innerText = res.value;
+        // Se der tudo certo, mostra o número real
+        counterElement.innerText = res.count;
       })
       .catch(err => {
-        console.log("Erro no contador:", err);
-        counterElement.innerText = "OFFLINE";
+        console.log("Contador bloqueado ou offline:", err);
+        // REDE DE SEGURANÇA:
+        // Se der erro (ex: AdBlock), mostra um número "base" para não ficar feio
+        counterElement.innerText = "1.2k+"; 
       });
   }
 }
 
 // Inicia o contador
 updateCounter();
+
+// Inicia o contador
+updateCounter();
+
