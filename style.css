@@ -818,5 +818,24 @@ footer p {
 
 
 
+/* Contador de Visitas Cyberpunk */
+.visitor-counter {
+  font-family: "Orbitron", monospace;
+  font-size: 0.9rem;
+  color: var(--secondary); /* Ciano */
+  background: rgba(0, 240, 255, 0.05);
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  margin: 1rem 0;
+  letter-spacing: 2px;
+}
+
+#visits {
+  color: var(--accent); /* Rosa */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 0, 110, 0.5);
+}
 
 
